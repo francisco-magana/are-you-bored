@@ -1,4 +1,10 @@
 body {
     background-color: black;
+    color: white;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
 }
