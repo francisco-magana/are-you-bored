@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BoredService } from "./services/bored.service";
+import { activity } from "../types";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'are-you-bored';
+
+  data: activity | null = null;
+  constructor(private bored: BoredService) {}
+
+  ngOnInit() {
+    this.bored.getActivity().subscribe(response => {
+      this.data = response;
+    });
+  }
+
 }
