@@ -7,5 +7,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 98vh;
-    padding: 3px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 426px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 10px;
+    }
 }
