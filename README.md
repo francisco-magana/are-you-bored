@@ -1,5 +1,9 @@
 # AreYouBored
 
+This is a website to give you ideas when bored. This app use [BoredAPI](https://www.boredapi.com/) to get activities that are shown in the webpage. Go and get an idea if you want :).
+
+# Angular CLI generated text
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 ## Development server
