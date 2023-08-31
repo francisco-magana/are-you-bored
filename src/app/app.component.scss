@@ -1,5 +1,6 @@
 .text-container h1 {
     margin: 0;
+    margin-bottom: 16px;
     font-size: 3rem;
     color: rgba(225, 225, 225, .01);
     background-image: url("https://img.rawpixel.com/private/static/images/website/2022-05/v904-nunny-004-a_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1314046620b4544b4358b12caaba9db6");
@@ -36,7 +37,9 @@
     display: flex;
     flex-direction: column;
     width: 80vw;
+    min-height: 20vh;
     padding: 20px 16px;
+    
 }
 
 .property-name {
@@ -62,4 +65,51 @@
 
 .description {
     font-size: 1.3rem;
+}
+
+.activity-details {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.detail-icon {
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+    border-radius: 32px;
+    padding: 8px;
+}
+
+.detail-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1.2rem;
+    margin-left: 12px;
+
+    & > p {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.detail-data {
+    font-size: 1.4rem;
+    margin-left: 0;
+}
+
+.red {
+    color: #f3772aec;
+}
+
+.green {
+    color: aquamarine;
 }

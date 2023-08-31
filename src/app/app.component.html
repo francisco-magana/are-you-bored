@@ -1,12 +1,28 @@
 <div class="page-container">
   <div class="page-header">
     <h1 class="title">Are you bored?</h1>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam non asperiores reiciendis? Amet, atque quam?</p>
+    <p class="description">Discover a variety of ideas to make the most out of your free time and beat the boredom.</p>
   </div>
   <div class="card">
     <p class="property-name">Activity</p>
     <div class="text-container">
       <h1>{{data?.activity}}</h1>
+    </div>
+    <div class="activity-details">
+      <div class="detail">
+        <img class="detail-icon" src="assets/icons/people-circle-outline.svg"/>
+        <div class="detail-text">
+          <p>Participants</p>
+          <p class="detail-data">{{data?.participants}}</p>
+        </div>
+      </div>
+      <div class="detail">
+        <img class="detail-icon" src="assets/icons/cash-outline.svg"/>
+        <div class="detail-text">
+          <p>Cost</p>
+          <p class="detail-data" [ngClass]="data?.price! > 0 ? 'red' : 'green'">{{data?.price! > 0 ? 'Not free' : 'FREE'}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
