@@ -26,5 +26,7 @@
       </div>
     </div>
   </div>
-  <button class="button" (click)="generateNewIdea()">Generate new idea</button>
+  <button [disabled]="!able_to_realod" class="button" (click)="generateNewIdea()">
+    {{able_to_realod ? "Generate new idea" : "Wait a few seconds"}}
+  </button>
 </div>

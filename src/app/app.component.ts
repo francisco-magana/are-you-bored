@@ -10,6 +10,10 @@ import { activity } from "../types";
 export class AppComponent {
 
   data: activity | null = null;
+  timer: number = 0;
+  able_to_realod: boolean = true;
+  seconds: number = 0;
+  RELOAD_TIME_IN_SECONDS: number = 5;
   constructor(private bored: BoredService) {}
 
   ngOnInit() {
@@ -17,9 +21,23 @@ export class AppComponent {
   }
 
   generateNewIdea() {
+    this.ableToReloadTimer();
     this.bored.getActivity().subscribe(response => {
       this.data = response;
+      this.able_to_realod = false;
     });
+  }
+
+  ableToReloadTimer() {
+    setTimeout(() => {
+      this.seconds += 1;
+      if (this.seconds <= this.RELOAD_TIME_IN_SECONDS) {
+        this.ableToReloadTimer();
+      } else {
+        this.able_to_realod = true;
+        this.seconds = 0;
+      }
+    }, 1000);
   }
 
 }

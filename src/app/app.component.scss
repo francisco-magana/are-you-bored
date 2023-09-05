@@ -139,3 +139,7 @@
     transform: scale(1.1);
     background-color: darken($color: #e0ef71, $amount: 15%);
 }
+
+.button:disabled {
+    background-color: #626262;
+}
