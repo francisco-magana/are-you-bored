@@ -20,9 +20,10 @@ export class AppComponent {
     this.generateNewIdea();
   }
 
-  generateNewIdea() {
+  generateNewIdea(idea_type?: string) {
+    if (!this.able_to_realod) return;
     this.ableToReloadTimer();
-    this.bored.getActivity().subscribe(response => {
+    this.bored.getActivity(idea_type).subscribe(response => {
       this.data = response;
       this.able_to_realod = false;
     });

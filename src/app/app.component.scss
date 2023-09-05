@@ -143,3 +143,35 @@
 .button:disabled {
     background-color: #626262;
 }
+
+.types-container {
+    display: flex;
+    max-width: 65vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.type {
+    padding: 4px 8px;
+    background-color: #a3dcb8;
+    color: darken($color: #a3dcb8, $amount: 55%);
+    margin: 8px 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.type:hover {
+    transform: scale(1.1);
+    background-color: darken($color: #a3dcb8, $amount: 15%);
+}
+
+.dividing-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
