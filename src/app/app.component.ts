@@ -13,6 +13,10 @@ export class AppComponent {
   constructor(private bored: BoredService) {}
 
   ngOnInit() {
+    this.generateNewIdea();
+  }
+
+  generateNewIdea() {
     this.bored.getActivity().subscribe(response => {
       this.data = response;
     });

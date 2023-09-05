@@ -122,3 +122,20 @@
     border-radius: 8px;
     margin-bottom: 8px;
 }
+
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 24px;
+    margin-top: 16px;
+    background-color: #e0ef71;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: darken($color: #e0ef71, $amount: 15%);
+}
