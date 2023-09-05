@@ -34,13 +34,6 @@
     <p>Choose an activity type</p>
   </div>
   <div class="types-container" *ngIf="able_to_realod">
-    <span (click)="generateNewIdea('education')" class="type">Education</span>
-    <span (click)="generateNewIdea('recreational')" class="type">Recreational</span>
-    <span (click)="generateNewIdea('diy')" class="type">DIY</span>
-    <span (click)="generateNewIdea('charity')" class="type">Charity</span>
-    <span (click)="generateNewIdea('cooking')" class="type">Cooking</span>
-    <span (click)="generateNewIdea('relaxation')" class="type">Relaxation</span>
-    <span (click)="generateNewIdea('music')" class="type">Music</span>
-    <span (click)="generateNewIdea('busywork')" class="type">Busywork</span>
+    <span *ngFor="let type of activity_types" (click)="generateNewIdea(type.value)" class="type">{{type.display_text}}</span>
   </div>
 </div>

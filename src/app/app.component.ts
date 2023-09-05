@@ -14,6 +14,16 @@ export class AppComponent {
   able_to_realod: boolean = true;
   seconds: number = 0;
   RELOAD_TIME_IN_SECONDS: number = 5;
+  activity_types: any[] = [
+    {value: "education", display_text: "Education"},
+    {value: "recreational", display_text: "Recreational"},
+    {value: "diy", display_text: "DIY"},
+    {value: "charity", display_text: "Charity"},
+    {value: "cooking", display_text: "Cooking"},
+    {value: "relaxation", display_text: "Relaxation"},
+    {value: "music", display_text: "Music"},
+    {value: "busywork", display_text: "Busywork"},
+  ]
   constructor(private bored: BoredService) {}
 
   ngOnInit() {
